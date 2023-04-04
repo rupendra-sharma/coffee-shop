@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.coffee</groupId>
+	<artifactId>order-service</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>order-service</name>
+	<description>Order service for coffee shop</description>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>11</java.version>
+		<spring.version>2.0.1.RELEASE</spring.version>
+		<maven.compiler.source>11</maven.compiler.source>
+    	<maven.compiler.target>11</maven.compiler.target>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-parent</artifactId>
+				<type>pom</type>
+				<version>${spring.version}</version>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-mongodb -->
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+		
+		<!-- Spring-kafka -->
+		<dependency>
+		    <groupId>org.springframework.kafka</groupId>
+		    <artifactId>spring-kafka</artifactId>
+		</dependency>
+		
+		<!-- Confluent-->
+		<!--
+		<dependency>
+		    <groupId>io.confluent</groupId>
+		    <artifactId>kafka-schema-registry-client</artifactId>
+		    <version>7.0.1</version>
+		</dependency>
+		-->
+		
+	    <!-- JUnit -->
+	    <dependency>
+	        <groupId>junit</groupId>
+	        <artifactId>junit</artifactId>
+	        <version>4.13.2</version>
+	        <scope>test</scope>
+	    </dependency>
+	    
+	    <!-- Mockito -->
+	    <dependency>
+	        <groupId>org.mockito</groupId>
+	        <artifactId>mockito-core</artifactId>
+	        <version>3.11.2</version>
+	        <scope>test</scope>
+	    </dependency>
+		<dependency>
+		    <groupId>org.junit.jupiter</groupId>
+		    <artifactId>junit-jupiter</artifactId>
+		    <version>5.8.2</version>
+		    <scope>test</scope>
+		</dependency>
+
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>2.0.1.RELEASE</version>
+			</plugin>
+		</plugins>
+	</build>
+
+
+</project>

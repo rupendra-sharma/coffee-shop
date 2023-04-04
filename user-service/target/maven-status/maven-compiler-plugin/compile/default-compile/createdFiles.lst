@@ -1,0 +1,6 @@
+com/coffee/user/repositories/UserRepository.class
+com/coffee/user/api/UserController.class
+com/coffee/user/models/User.class
+com/coffee/user/exceptions/UserNotFoundException.class
+com/coffee/user/UserServiceApplication.class
+com/coffee/user/services/UserService.class
